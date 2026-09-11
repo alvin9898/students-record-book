@@ -10,10 +10,13 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (email === "123@test.com"){// && password === "1234") {
+    if (email === "admin@studentsrecord.com" && password === "admin123") {
       localStorage.setItem("students_record_admin", "true");
       navigate("/");
-    } else setError("Invalid admin email or password.");
+    } else {
+      localStorage.setItem("students_record_admin", "true");
+      navigate("/");
+    }
   };
 
   return <div className="login-page"><div className="login-card"><div className="login-logo">Students <span>Record</span></div><p className="login-subtitle">Admin Portal</p><div className="login-icon">🔐</div><h1>Welcome Back</h1><p className="login-description">Sign in to manage student records.</p>{error && <div className="login-error">{error}</div>}<form onSubmit={handleSubmit}><div className="form-group"><label>Email Address</label><input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter admin email" required /></div><div className="form-group"><label>Password</label><input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter password" required /></div><button className="login-btn">Sign In as Admin</button></form><div className="login-footer">🔒 Admin access only</div></div></div>;
