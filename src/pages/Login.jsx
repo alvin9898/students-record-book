@@ -10,7 +10,7 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (email === "alvin@test.com" && password === "alvin1234") {
+    if (email === "123@test.com" && password === "1234") {
       localStorage.setItem("students_record_admin", "true");
       navigate("/");
     } else setError("Invalid admin email or password.");
