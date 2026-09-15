@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "../styles/StudentDetails.css";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://students-record-book.onrender.com/api";
 
 const emptyMark = (subject) => ({
   subjectId: subject._id,
