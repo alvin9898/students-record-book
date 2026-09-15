@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "../styles/Dashboard.css";
 import { getStudents, getSubjects } from "../api";
 
-// const API_URL = "http://localhost:5000/api";
+ const API_URL = "https://students-record-book.onrender.com/api";
 
 function Dashboard() {
   const [students, setStudents] = useState([]);
